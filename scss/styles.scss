@@ -75,18 +75,45 @@ $brown: #412C00;
 
 /* properties */
 
+#branding {
+  font-size: 3em;
+  font-weight: 500;
+  letter-spacing: -4px;
+}
+
 body {
   @include flex-column(center,center);
   h1,h2 {
     @include flex-column(center,center);
     text-transform: uppercase;
-    letter-spacing: -4px;
+    margin: 2em 0;
+  }
+  h2 {
+    letter-spacing: -1px;
+    font-weight: 600;
+  }
+  .logos {
+    // border: 1px solid grey;
+    // max-height: 500px;
+    max-width: 800px;
+    @include flex-row(center,center);
+    flex-wrap: wrap;
+
+    div {
+      width: calc(98% / 3) ;
+      border: 1px solid grey;
+      min-height: 250px;
+    @include flex-row(center,center);
+      img {
+        max-height: 250px;
+        overflow: hidden;
+        width: 80%;
+        height:100%;
+      }
+    }
   }
 }
 
-#branding {
-  font-size: 3em;
-  font-weight: 500;
-}
+
 
 // example layout
