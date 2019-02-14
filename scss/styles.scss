@@ -75,5 +75,18 @@ $brown: #412C00;
 
 /* properties */
 
+body {
+  @include flex-column(center,center);
+  h1,h2 {
+    @include flex-column(center,center);
+    text-transform: uppercase;
+    letter-spacing: -4px;
+  }
+}
+
+#branding {
+  font-size: 3em;
+  font-weight: 500;
+}
 
 // example layout

@@ -5,5 +5,21 @@
 /* custom variables */
 /* custom mixins */
 /* properties */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  body h1, body h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: -4px; }
+
+#branding {
+  font-size: 3em;
+  font-weight: 500; }
 
 /*# sourceMappingURL=styles.css.map */
