@@ -1,16 +1,35 @@
-/* imported fonts */
-@import url("https://fonts.googleapis.com/css?family=Merriweather");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-@import url("img/glyphicons/glyphicons");
 /* custom variables */
 /* custom mixins */
-/* properties */
+/* general properties */
 .branding {
   font-size: 4em;
   font-weight: 500;
   letter-spacing: -4px;
   margin: 1em; }
+  @media only screen and (max-width: 576px) {
+    .branding {
+      font-size: 2em; } }
 
+.collectionlink {
+  text-decoration: none; }
+  .collectionlink:hover {
+    color: #FF1493; }
+  .collectionlink h2 {
+    letter-spacing: 2px; }
+
+@media only screen and (max-width: 576px) {
+  header img {
+    width: 100% !important; } }
+
+a {
+  color: black; }
+  a p {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 3em 0; }
+
+/* body properties */
 body {
   display: flex;
   flex-direction: column;
@@ -27,14 +46,22 @@ body {
     letter-spacing: -2px;
     font-weight: 400;
     font-size: 2em; }
-  body .logos {
+
+/* area - logos chart */
+main {
+  /* area - collection */
+  /* area - community */ }
+  main .logos {
     max-width: 800px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; }
-    body .logos div {
+    @media only screen and (max-width: 576px) {
+      main .logos {
+        width: 100%; } }
+    main .logos .logo {
       width: calc(98% / 3);
       border: 1px solid grey;
       min-height: 250px;
@@ -42,12 +69,22 @@ body {
       flex-direction: row;
       justify-content: center;
       align-items: center; }
-      body .logos div img {
+      @media only screen and (max-width: 576px) {
+        main .logos .logo {
+          width: 30%; } }
+      main .logos .logo img {
         max-height: 250px;
         overflow: hidden;
         width: 80%;
         height: 100%; }
-  body .collection {
+        @media only screen and (max-width: 576px) {
+          main .logos .logo img {
+            max-width: 90px; } }
+    @media only screen and (max-width: 576px) {
+      main .logos .logo {
+        min-height: 150px;
+        max-height: 150px; } }
+  main .collection {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -55,34 +92,37 @@ body {
     flex-wrap: wrap;
     max-width: 700px;
     margin: auto; }
-    body .collection img {
+    @media only screen and (max-width: 576px) {
+      main .collection {
+        max-width: 100%; } }
+    main .collection img {
       margin: 1.5em 0; }
-    body .collection :nth-last-child(-n + 4) {
+    main .collection :nth-child(2), main .collection :nth-child(3) {
       margin: 0.2em 0; }
-
-main a {
-  color: black; }
-  main a p {
-    font-size: 0.85em;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 3em 0; }
-main .community {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
-  main .community :first-child a {
+      @media only screen and (max-width: 576px) {
+        main .collection :nth-child(2), main .collection :nth-child(3) {
+          width: 50%; } }
+    main .collection :nth-last-child(-n + 4) {
+      margin: 0.2em 0; }
+      @media only screen and (max-width: 576px) {
+        main .collection :nth-last-child(-n + 4) {
+          width: 50%; } }
+  main .community {
     width: 100%;
-    text-decoration: none; }
-    main .community :first-child a p {
-      border-bottom: 2px black solid;
-      text-transform: none;
-      padding: 0.5em 4em; }
-      main .community :first-child a p span {
-        font-weight: 700; }
-  main .community .button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    main .community :first-child a {
+      width: 100%;
+      text-decoration: none; }
+      main .community :first-child a p {
+        border-bottom: 2px black solid;
+        text-transform: none;
+        padding: 0.5em 4em; }
+        main .community :first-child a p span {
+          font-weight: 700; }
+  main .button {
     margin: 3em;
     /* a href styles formatting */
     text-decoration: none;
@@ -92,10 +132,17 @@ main .community {
     font-size: 0.8em;
     border: 1px solid black;
     padding: 0.6em 4em; }
-    main .community .button:hover, main .community .button:active {
+    main .button:hover, main .button:active {
       background-color: black;
       color: white; }
+  @media only screen and (max-width: 576px) {
+    main .community a img {
+      width: 100%; } }
+  @media only screen and (max-width: 576px) {
+    main .collection img {
+      max-width: 100%; } }
 
+/* area - footer */
 footer {
   display: flex;
   flex-direction: column;
@@ -104,12 +151,19 @@ footer {
   font-size: 0.8em;
   font-weight: 700;
   width: 800px; }
+  @media only screen and (max-width: 576px) {
+    footer {
+      width: 100%; } }
   footer .icons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 1em 2em; }
+    @media only screen and (max-width: 576px) {
+      footer .icons {
+        flex-wrap: wrap;
+        width: 100%; } }
     footer .icons aside {
       text-transform: uppercase;
       display: flex;
@@ -133,5 +187,9 @@ footer {
     padding-top: 30px;
     line-height: 14px;
     font-weight: 400; }
+  @media only screen and (max-width: 576px) {
+    footer .text {
+      padding: 2em;
+      text-align: center; } }
 
 /*# sourceMappingURL=styles.css.map */
