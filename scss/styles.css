@@ -73,9 +73,9 @@ main {
         main .logos .logo {
           width: 30%; } }
       main .logos .logo img {
-        max-height: 250px;
+        max-height: 200px;
         overflow: hidden;
-        width: 80%;
+        width: 60%;
         height: 100%; }
         @media only screen and (max-width: 576px) {
           main .logos .logo img {
