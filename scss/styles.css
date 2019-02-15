@@ -5,10 +5,11 @@
 /* custom variables */
 /* custom mixins */
 /* properties */
-#branding {
-  font-size: 3em;
+.branding {
+  font-size: 4em;
   font-weight: 500;
-  letter-spacing: -4px; }
+  letter-spacing: -4px;
+  margin: 1em; }
 
 body {
   display: flex;
@@ -66,5 +67,71 @@ main a {
     text-transform: uppercase;
     text-align: center;
     margin: 3em 0; }
+main .community {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  main .community :first-child a {
+    width: 100%;
+    text-decoration: none; }
+    main .community :first-child a p {
+      border-bottom: 2px black solid;
+      text-transform: none;
+      padding: 0.5em 4em; }
+      main .community :first-child a p span {
+        font-weight: 700; }
+  main .community .button {
+    margin: 3em;
+    /* a href styles formatting */
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.8em;
+    border: 1px solid black;
+    padding: 0.6em 4em; }
+    main .community .button:hover, main .community .button:active {
+      background-color: black;
+      color: white; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  font-weight: 700;
+  width: 800px; }
+  footer .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 2em; }
+    footer .icons aside {
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      footer .icons aside img {
+        width: 100px;
+        height: 100px; }
+  footer .branding {
+    color: #727171;
+    font-size: 3em; }
+  footer .social img {
+    width: 30px;
+    height: 30px;
+    margin: 5px; }
+  footer p {
+    max-width: 500px;
+    font-size: 11px;
+    color: #727171;
+    padding-top: 30px;
+    line-height: 14px;
+    font-weight: 400; }
 
 /*# sourceMappingURL=styles.css.map */
